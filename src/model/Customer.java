@@ -18,9 +18,25 @@ public class Customer {
     private String address;
     private int reservationId;
     private int paymentId;
+
+    public Customer(String identificationNumber, String firstName, String lastName, String email, String phone, String address, int reservationId, int paymentId) {
+        this.identificationNumber = identificationNumber;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.reservationId = reservationId;
+        this.paymentId = paymentId;
+    }
+    
     
     public int getCustomerId() {
         return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public String getIdentificationNumber() {

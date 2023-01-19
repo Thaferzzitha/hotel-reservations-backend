@@ -17,8 +17,7 @@ public class Room {
     private int categoryId;
     private int reservationId;
     
-    public Room(int roomId, int roomNumber, boolean available, int floor, int categoryId, int reservationId) {
-        this.roomId = roomId;
+    public Room(int roomNumber, boolean available, int floor, int categoryId, int reservationId) {
         this.roomNumber = roomNumber;
         this.available = available;
         this.floor = floor;
