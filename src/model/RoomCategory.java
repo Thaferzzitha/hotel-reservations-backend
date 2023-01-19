@@ -9,13 +9,14 @@ package model;
  * @author THALIA
  */
 public class RoomCategory {
+
     private int categoryId;
     private String categoryName;
     private String categoryDescription;
     private int capacity;
     private int beds;
     private float price;
-
+    
     public RoomCategory(String categoryName, String categoryDescription, int capacity, int beds, float price) {
         this.categoryName = categoryName;
         this.categoryDescription = categoryDescription;
@@ -24,6 +25,10 @@ public class RoomCategory {
         this.price = price;
     }
 
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+ 
     public int getCategoryId() {
         return categoryId;
     }
