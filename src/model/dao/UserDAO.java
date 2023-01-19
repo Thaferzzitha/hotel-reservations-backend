@@ -34,6 +34,7 @@ public class UserDAO {
             user.setId(rs.getInt("user_id"));
             users.add(user);
         }
+        this.connection.close();
         return users;
     }
     
@@ -44,6 +45,8 @@ public class UserDAO {
         stmt.setString(3, user.getEmail());
         stmt.setInt(4, user.getRole());
         stmt.execute();
+        this.connection.close();
+
     }
 
     public User read(int userId) throws SQLException {
@@ -51,8 +54,10 @@ public class UserDAO {
         stmt.setInt(1, userId);
         ResultSet rs = stmt.executeQuery();
         if (rs.next()) {
+            this.connection.close();
             return new User(rs.getString("username"), rs.getString("password"), rs.getString("email"), rs.getInt("role"));
         }
+        this.connection.close();
         return null;
     }
 
@@ -64,12 +69,14 @@ public class UserDAO {
         stmt.setInt(4, user.getRole());
         stmt.setInt(5, user.getId());
         stmt.execute();
+        this.connection.close();
     }
 
     public void delete(int userId) throws SQLException {
         PreparedStatement stmt = connection.prepareStatement("DELETE FROM users WHERE user_id = ?");
         stmt.setInt(1, userId);
         stmt.execute();
+        this.connection.close();
     }
 }
 
