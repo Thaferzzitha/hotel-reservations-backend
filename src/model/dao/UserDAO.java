@@ -29,12 +29,12 @@ public class UserDAO {
         List<User> users = new ArrayList<>();
         PreparedStatement stmt = connection.prepareStatement("SELECT * FROM users");
         ResultSet rs = stmt.executeQuery();
+        this.connection.close();
         while (rs.next()) {
             User user = new User(rs.getString("username"), rs.getString("password"), rs.getString("email"), rs.getInt("role"));
             user.setId(rs.getInt("user_id"));
             users.add(user);
         }
-        this.connection.close();
         return users;
     }
     
@@ -55,9 +55,10 @@ public class UserDAO {
         ResultSet rs = stmt.executeQuery();
         if (rs.next()) {
             this.connection.close();
-            return new User(rs.getString("username"), rs.getString("password"), rs.getString("email"), rs.getInt("role"));
+            User user = new User(rs.getString("username"), rs.getString("password"), rs.getString("email"), rs.getInt("role"));
+            user.setId(userId);
+            return user;
         }
-        this.connection.close();
         return null;
     }
 
