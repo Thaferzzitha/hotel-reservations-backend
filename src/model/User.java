@@ -9,7 +9,7 @@ package model;
  * @author nesch
  */
 public class User {
-    private int user_id;
+    private int userId;
     private String username;
     private String password;
     private String email;
@@ -23,7 +23,11 @@ public class User {
     }
 
     public int getId() {
-        return user_id;
+        return userId;
+    }
+
+    public void setId(int user_id) {
+        this.userId = user_id;
     }
 
     public String getUsername() {
