@@ -8,21 +8,21 @@ package model;
  *
  * @author Thalia
  */
-public class PackageService {
-    private int packageId;
+public class PackService {
+    private int packId;
     private int reservationServiceId;
 
-    public PackageService(int packageId, int reservationServiceId) {
-        this.packageId = packageId;
+    public PackService(int packId, int reservationServiceId) {
+        this.packId = packId;
         this.reservationServiceId = reservationServiceId;
     }
 
-    public int getPackageId() {
-        return packageId;
+    public int getPackId() {
+        return packId;
     }
 
-    public void setPackageId(int packageId) {
-        this.packageId = packageId;
+    public void setPackId(int packId) {
+        this.packId = packId;
     }
 
     public int getReservationServiceId() {

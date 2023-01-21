@@ -15,7 +15,7 @@ public class Reservation {
     private String checkOut;
     private String state;
  
-    public Reservation(int reservationId, int roomId, String checkIn, String checkOut, String state) {
+    public Reservation(int roomId, String checkIn, String checkOut, String state) {
         this.roomId = roomId;
         this.checkIn = checkIn;
         this.checkOut = checkOut;

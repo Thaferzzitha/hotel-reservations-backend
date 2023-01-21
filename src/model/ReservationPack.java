@@ -8,13 +8,13 @@ package model;
  *
  * @author Thalia
  */
-public class ReservationPackage {
+public class ReservationPack {
     private int reservationId;
-    private int packageId;
+    private int packId;
 
-    public ReservationPackage(int reservationId, int packageId) {
+    public ReservationPack(int reservationId, int packId) {
         this.reservationId = reservationId;
-        this.packageId = packageId;
+        this.packId = packId;
     }
 
     public int getReservationId() {
@@ -25,12 +25,12 @@ public class ReservationPackage {
         this.reservationId = reservationId;
     }
 
-    public int getPackageId() {
-        return packageId;
+    public int getPackId() {
+        return packId;
     }
 
-    public void setPackageId(int packageId) {
-        this.packageId = packageId;
+    public void setPackId(int packId) {
+        this.packId = packId;
     }
     
     
