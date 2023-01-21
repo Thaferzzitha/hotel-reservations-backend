@@ -64,7 +64,7 @@ public class ReservationDAO {
             String checkIn = rs.getString("check_in");
             String checkOut = rs.getString("check_out");
             String state = rs.getString("state");
-            Reservation reservation = new Reservation(reservationId, roomId, checkIn, checkOut, state);
+            Reservation reservation = new Reservation(roomId, checkIn, checkOut, state);
             reservation.setReservationId(reservationId);
 
             return reservation;
