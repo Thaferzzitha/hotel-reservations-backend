@@ -22,6 +22,10 @@ public class Payment {
         this.paymentDate = paymentDate;
         this.paymentMethod = paymentMethod;
     }
+
+    public void setPaymentId(int paymentId) {
+        this.paymentId = paymentId;
+    }
     
     public int getPaymentId() {
         return paymentId;

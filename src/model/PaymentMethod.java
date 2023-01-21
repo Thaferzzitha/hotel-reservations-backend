@@ -20,6 +20,10 @@ public class PaymentMethod {
         return paymentMethodId;
     }
 
+    public void setPaymentMethodId(int paymentMethodId) {
+        this.paymentMethodId = paymentMethodId;
+    }
+
 
     public String getMethodName() {
         return methodName;

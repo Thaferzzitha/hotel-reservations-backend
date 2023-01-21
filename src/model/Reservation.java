@@ -16,11 +16,14 @@ public class Reservation {
     private String state;
  
     public Reservation(int reservationId, int roomId, String checkIn, String checkOut, String state) {
-        this.reservationId = reservationId;
         this.roomId = roomId;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
         this.state = state;
+    }
+
+    public void setReservationId(int reservationId) {
+        this.reservationId = reservationId;
     }
 
     public int getReservationId() {

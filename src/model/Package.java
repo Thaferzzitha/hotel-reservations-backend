@@ -22,6 +22,10 @@ public class Package {
         return packageId;
     }
 
+    public void setPackageId(int packageId) {
+        this.packageId = packageId;
+    }
+
     public String getPackageName() {
         return packageName;
     }

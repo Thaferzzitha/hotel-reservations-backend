@@ -42,7 +42,7 @@ public class RoomDAO {
     }
     
     public void create(Room room) throws SQLException {
-        PreparedStatement stmt = connection.prepareStatement("INSERT INTO room (room_id, room_number, available, floor, category_id, reservation_id) VALUES (?, ?, ?, ?, ?, ?)");
+        PreparedStatement stmt = connection.prepareStatement("INSERT INTO rooms (room_id, room_number, available, floor, category_id, reservation_id) VALUES (?, ?, ?, ?, ?, ?)");
         
         stmt.setInt(1, room.getRoomId());
         stmt.setInt(2, room.getRoomNumber());
@@ -77,7 +77,7 @@ public class RoomDAO {
     }
 
     public void update(Room room) throws SQLException {
-        PreparedStatement stmt = connection.prepareStatement("UPDATE room SET room_number = ?, available = ?, floor = ?, category_id = ?, reservation_id = ? WHERE room_id = ?");
+        PreparedStatement stmt = connection.prepareStatement("UPDATE rooms SET room_number = ?, available = ?, floor = ?, category_id = ?, reservation_id = ? WHERE room_id = ?");
         stmt.setInt(1, room.getRoomNumber());
         stmt.setBoolean(2, room.isAvailable());
         stmt.setInt(3, room.getFloor());

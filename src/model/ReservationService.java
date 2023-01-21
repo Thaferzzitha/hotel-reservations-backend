@@ -20,6 +20,10 @@ public class ReservationService {
         this.servicePrice = servicePrice;
     }
 
+    public void setReservationServiceId(int reservationServiceId) {
+        this.reservationServiceId = reservationServiceId;
+    }
+
     public int getReservationServiceId() {
         return reservationServiceId;
     }
