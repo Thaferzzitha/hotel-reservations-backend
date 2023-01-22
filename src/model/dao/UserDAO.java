@@ -79,6 +79,30 @@ public class UserDAO {
         stmt.execute();
         this.connection.close();
     }
+    
+    public boolean checkUniqueEmail(String email) throws SQLException {
+        PreparedStatement stmt = connection.prepareStatement("SELECT * FROM users WHERE email = ?");
+        stmt.setString(1, email);
+        ResultSet rs = stmt.executeQuery();
+        this.connection.close();
+
+        if (rs.next()) {
+            return false; //Email no es unico
+        }
+        return true; //Email si es único
+    }
+    
+    public boolean checkUniqueUsername(String username) throws SQLException {
+        PreparedStatement stmt = connection.prepareStatement("SELECT * FROM users WHERE username = ?");
+        stmt.setString(1, username);
+        ResultSet rs = stmt.executeQuery();
+        this.connection.close();
+
+        if (rs.next()) {
+            return false; //username no es unico
+        }
+        return true; //username si es único
+    }
 }
 
 
